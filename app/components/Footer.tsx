@@ -27,9 +27,17 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-3 md:mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400 text-sm md:text-base">
-              <li>hello@newbotic.co.uk</li>
+              <li>
+                <a href="mailto:hello@newbotic.co.uk" className="hover:text-white transition">
+                  hello@newbotic.co.uk
+                </a>
+              </li>
+              <li>
+                <a href="tel:+447123456789" className="hover:text-white transition">
+                  +4407891897558
+                </a>
+              </li>
               <li>London, UK</li>
-              <li><a href="#contact" className="hover:text-white transition">Get Quote</a></li>
             </ul>
           </div>
         </div>
