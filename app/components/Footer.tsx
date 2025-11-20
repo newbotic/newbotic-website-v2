@@ -1,11 +1,13 @@
+import Logo from './Logo'
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-8 md:py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           <div className="md:col-span-2">
-            <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Newbotic</h3>
-            <p className="text-gray-400 mb-4 text-sm md:text-base">
+            <Logo />
+            <p className="text-gray-400 mb-4 text-sm md:text-base mt-2">
               AI-powered digital solutions that deliver results 70% faster at 50% lower cost.
             </p>
             <div className="flex space-x-4">
@@ -33,8 +35,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+447123456789" className="hover:text-white transition">
-                  +4407891897558
+                <a href="tel:+4407891897558" className="hover:text-white transition">
+                  +44 0789 189 7558
                 </a>
               </li>
               <li>London, UK</li>
