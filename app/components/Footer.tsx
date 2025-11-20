@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400 text-sm md:text-base">
-          <p>&copy; 2024 Newbotic Ltd. All rights reserved.</p>
+          <p>&copy; 2025 Newbotic Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>
