@@ -68,8 +68,7 @@ export default function Home() {
             <h2 className="text-2xl md:text-4xl font-bold mb-6">About Newbotic</h2>
             <p className="text-lg md:text-xl mb-8 opacity-90">
               We're a London-based AI solutions agency helping businesses leverage artificial intelligence 
-              to achieve unprecedented growth. Our Romanian-British team combines technical excellence 
-              with creative innovation.
+              to achieve unprecedented growth. 
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
               <div className="text-center">
