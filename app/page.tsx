@@ -39,9 +39,9 @@ export default function Home() {
               <p className="text-sm">⏰ Offer ends in: <span className="font-bold text-yellow-400">7 days</span></p>
             </div>
 
-            {/* CTA Buttons - Cal.com și WhatsApp */}
+            {/* CTA Buttons - Calendly și WhatsApp */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="https://cal.com/newbotic/15min" target="_blank" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
+              <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
                 📅 Book Free Call
               </a>
               <a href="https://wa.me/447891897558" target="_blank" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
@@ -179,7 +179,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-gray-300 mb-6">Get 50% OFF on your first service - Limited time offer!</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://cal.com/newbotic/15min" target="_blank" className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold">
+              <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold">
                 📅 Book Free Call
               </a>
               <a href="https://wa.me/447891897558" target="_blank" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-bold">
