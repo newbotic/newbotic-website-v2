@@ -1,176 +1,144 @@
 'use client'
-import { useState, useRef, useEffect } from 'react'
+
+import { useState } from 'react'
 
 export default function AIChatBot() {
   const [isOpen, setIsOpen] = useState(false)
-  const [messages, setMessages] = useState<Array<{text: string, isUser: boolean}>>([])
+  const [messages, setMessages] = useState([
+    { 
+      text: "👋 Hi! I'm NEWBOTIC AI Assistant. 🇬🇧\n\nI have a special offer for you - 50% OFF on my services!\n\nWhat are you interested in?", 
+      sender: 'bot' 
+    }
+  ])
   const [input, setInput] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
-  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const [showSuggestions, setShowSuggestions] = useState(true)
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
-  }
-
-  useEffect(() => {
-    scrollToBottom()
-  }, [messages])
-
- 
-  const handleSend = async () => {
-  if (!input.trim() || isLoading) return
-
-  const userMessage = { text: input, isUser: true }
-  setMessages(prev => [...prev, userMessage])
-  setInput('')
-  setIsLoading(true)
-
-  try {
-    console.log('Sending message to API:', input) // 👈 ADAUGĂ ASTA
-    
-    const response = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 
-        'Content-Type': 'application/json' 
-      },
-      body: JSON.stringify({ message: input })
-    })
-    
-    console.log('API Response status:', response.status) // 👈 ADAUGĂ ASTA
-    
-    if (!response.ok) {
-      throw new Error(`API error: ${response.status}`)
-    }
-    
-    const data = await response.json()
-    console.log('API Response data:', data) // 👈 ADAUGĂ ASTA
-    
-    setMessages(prev => [...prev, { text: data.reply, isUser: false }])
-  } catch (error) {
-    console.error('Chat error:', error) // 👈 ADAUGĂ ASTA
-    setMessages(prev => [...prev, { 
-      text: "Sorry, I'm having connection issues. Please email us at hello@newbotic.co.uk", 
-      isUser: false 
-    }])
-  } finally {
-    setIsLoading(false)
-  }
-}
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault()
-      handleSend()
-    }
-  }
-
-  const quickQuestions = [
-    "What services do you offer?",
-    "How much does it cost?",
-    "Book free AI audit",
-    "Contact information"
+  const suggestions = [
+    { text: "💰 Prices", reply: "prices" },
+    { text: "🔍 Website Audit", reply: "audit" },
+    { text: "🌐 Web Creation", reply: "website" },
+    { text: "🎯 Combo Package", reply: "combo" },
+    { text: "📅 Book a Call", reply: "call" },
+    { text: "⏱️ Delivery Time", reply: "how long" }
   ]
+
+  const handleSuggestion = (reply: string) => {
+    setInput(reply)
+    setTimeout(() => handleSend(reply), 100)
+  }
+
+  const handleSend = (forcedInput?: string) => {
+    const messageToSend = forcedInput !== undefined ? forcedInput : input
+    if (!messageToSend.trim()) return
+
+    setMessages(prev => [...prev, { text: messageToSend, sender: 'user' }])
+    setShowSuggestions(false)
+
+    const lowerInput = messageToSend.toLowerCase()
+    let botReply = ""
+
+    if (lowerInput.includes('price') || lowerInput.includes('cost') || lowerInput.includes('how much')) {
+      botReply = "🔥 LIMITED TIME OFFER - 50% OFF 🔥\n\n📊 Website Audit: £75 (was £150)\n🌐 Web Page Creation: £175 (was £350)\n🎯 Combo Package (Audit + Website): £225 (was £500)\n\n✅ All include 30 days free support!\n⏰ Offer expires in 7 days.\n\nWould you like a personalized quote?"
+    }
+    else if (lowerInput.includes('audit')) {
+      botReply = "🔍 WEBSITE AUDIT SERVICE - £75 (50% OFF)\n\nWhat's included:\n✅ Speed performance test\n✅ Security check\n✅ SEO analysis\n✅ Mobile responsiveness test\n✅ Detailed PDF report with recommendations\n\n⏱️ Delivery: 7 days\n📞 30 days free support included\n\nAre you interested in starting an audit?"
+    }
+    else if (lowerInput.includes('website') || lowerInput.includes('web') || lowerInput.includes('create')) {
+      botReply = "🌐 PROFESSIONAL WEBSITE CREATION - £175 (50% OFF)\n\nWhat you get:\n✅ Custom design\n✅ Mobile friendly\n✅ SEO optimized (appears on Google)\n✅ Contact form\n✅ Google Analytics setup\n✅ 3 pages included\n\n⏱️ Delivery: 7 days\n📞 30 days free support included\n\nTell me about your business and I'll give you a simulation!"
+    }
+    else if (lowerInput.includes('combo') || lowerInput.includes('both')) {
+      botReply = "🎯 BEST DEAL - COMBO PACKAGE: £225\n\nYou save £275 off the regular price!\n\nIncludes:\n✅ Complete Website Audit\n✅ Professional Website (3 pages)\n✅ 30 days free support\n✅ SEO optimization included\n✅ Google Analytics setup\n\n⏱️ Everything ready in 7 days!\n\nWould you like a personalized quote for your business?"
+    }
+    else if (lowerInput.includes('book') || lowerInput.includes('call') || lowerInput.includes('meeting')) {
+      botReply = "📅 FREE 15min DISCOVERY CALL\n\nDirect link: https://cal.com/newbotic/15min\n\nWhat we'll discuss in 15 minutes:\n1️⃣ You tell me about your business\n2️⃣ I show you what you need\n3️⃣ I give you a personalized quote\n4️⃣ I answer all your questions\n\nYou can also message me on WhatsApp: https://wa.me/447891897558\n\nI'm looking forward to talking with you! 🚀"
+    }
+    else if (lowerInput.includes('how long') || lowerInput.includes('delivery') || lowerInput.includes('7 days')) {
+      botReply = "⏱️ DELIVERY TIME: 7 days\n\n📅 Day 1-2: Analysis and planning\n📅 Day 3-5: Implementation\n📅 Day 6-7: Testing and delivery\n\n✅ After delivery, you get 30 days of free support for small adjustments.\n\nHurry up, the 50% OFF offer expires in 7 days!"
+    }
+    else if (lowerInput.includes('whatsapp') || lowerInput.includes('contact')) {
+      botReply = "💬 CONTACT DIRECT:\n\n📞 WhatsApp: https://wa.me/447891897558\n📧 Email: hello@newbotic.co.uk\n📷 Instagram: @newbotic\n\nI reply within 24 hours!\n\nYou can also ask me anything here in this chat."
+    }
+    else if (lowerInput.includes('hello') || lowerInput.includes('hi') || lowerInput.includes('hey')) {
+      botReply = "Hello! 👋 Glad you stopped by NEWBOTIC.\n\nI have a special offer for you: 50% OFF on website audit or website creation services.\n\nWhat interests you? I'll give you all the details!\n\n📌 You can choose one of the options below or ask me anything."
+    }
+    else {
+      botReply = "Sorry, I didn't quite understand that. 🤔\n\nI can help you with:\n\n💰 How much do services cost?\n🔍 What does the audit include?\n🌐 How do you create a website?\n🎯 What is the combo package?\n📅 How do I book a call?\n⏱️ How long does it take?\n💬 How can I contact you?\n\nChoose one of the questions above or ask me anything! 😊"
+    }
+
+    setTimeout(() => {
+      setMessages(prev => [...prev, { text: botReply, sender: 'bot' }])
+      setShowSuggestions(true)
+    }, 500)
+
+    if (forcedInput === undefined) {
+      setInput('')
+    }
+  }
 
   return (
     <>
       {/* Chat Button */}
-      <button 
+      <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 z-50 group"
+        className="fixed bottom-6 right-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full p-4 shadow-lg transition-all z-50 animate-bounce"
       >
-        <span className="text-2xl">🤖</span>
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+        💬
       </button>
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-20 right-6 w-80 h-96 bg-white rounded-2xl shadow-2xl border border-gray-200 z-50 flex flex-col">
+        <div className="fixed bottom-24 right-6 w-96 bg-slate-900 rounded-xl shadow-2xl border border-slate-700 z-50 flex flex-col">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-t-2xl flex justify-between items-center">
+          <div className="flex justify-between items-center p-4 border-b border-slate-700 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-t-xl">
             <div className="flex items-center gap-2">
-              <span className="text-xl">🤖</span>
-              <div>
-                <div className="font-bold">Newbotic AI</div>
-                <div className="text-xs opacity-80">Online • Ready to help</div>
-              </div>
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="font-bold text-white">NEWBOTIC AI</span>
+              <span className="bg-red-600 text-white text-xs px-2 py-0.5 rounded-full">50% OFF</span>
             </div>
-            <button 
-              onClick={() => setIsOpen(false)}
-              className="text-white hover:text-gray-200 text-lg"
-            >
+            <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white text-xl">
               ✕
             </button>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
-            {messages.length === 0 ? (
-              <div className="text-center text-gray-500 text-sm">
-                <div className="text-2xl mb-2">👋</div>
-                <p className="mb-4">Hello! I'm here to help with AI solutions for your business.</p>
-                
-                {/* Quick Questions */}
-                <div className="space-y-2">
-                  <p className="text-xs text-gray-400 mb-2">Try asking:</p>
-                  {quickQuestions.map((question, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setInput(question)}
-                      className="block w-full text-left p-2 bg-white border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-200 transition-colors text-xs text-gray-700"
-                    >
-                      {question}
-                    </button>
-                  ))}
+          <div className="h-96 overflow-y-auto p-4 space-y-3">
+            {messages.map((msg, idx) => (
+              <div key={idx} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div className={`max-w-[85%] p-3 rounded-lg whitespace-pre-line ${msg.sender === 'user' ? 'bg-blue-600 text-white' : 'bg-slate-800 text-gray-200 border border-slate-700'}`}>
+                  {msg.text}
                 </div>
               </div>
-            ) : (
-              messages.map((msg, index) => (
-                <div key={index} className={`mb-3 ${msg.isUser ? 'text-right' : 'text-left'}`}>
-                  <div className={`inline-block p-3 rounded-2xl max-w-[85%] ${
-                    msg.isUser 
-                      ? 'bg-blue-500 text-white rounded-br-none' 
-                      : 'bg-gray-200 text-gray-800 rounded-bl-none'
-                  }`}>
-                    {msg.text.split('\n').map((line, i) => (
-                      <p key={i} className={i > 0 ? 'mt-2' : ''}>{line}</p>
-                    ))}
-                  </div>
-                </div>
-              ))
-            )}
-            {isLoading && (
-              <div className="text-left mb-3">
-                <div className="inline-block p-3 rounded-2xl rounded-bl-none bg-gray-200 text-gray-800">
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-                  </div>
-                </div>
+            ))}
+            
+            {/* Suggestions Buttons */}
+            {showSuggestions && messages[messages.length - 1]?.sender === 'bot' && (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {suggestions.map((sug, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => handleSuggestion(sug.reply)}
+                    className="bg-slate-700 hover:bg-slate-600 text-white text-xs px-3 py-1.5 rounded-full transition"
+                  >
+                    {sug.text}
+                  </button>
+                ))}
               </div>
             )}
-            <div ref={messagesEndRef} />
           </div>
 
           {/* Input */}
-          <div className="p-4 border-t border-gray-200 bg-white">
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Ask about AI solutions..."
-                className="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-sm"
-                disabled={isLoading}
-              />
-              <button 
-                onClick={handleSend}
-                disabled={isLoading}
-                className="bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
-              >
-                {isLoading ? '...' : 'Send'}
-              </button>
-            </div>
+          <div className="p-4 border-t border-slate-700 flex gap-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+              placeholder="Type your question here..."
+              className="flex-1 p-2 rounded-lg bg-slate-800 text-white placeholder-gray-400 border border-slate-600 focus:outline-none focus:border-blue-500"
+            />
+            <button onClick={() => handleSend()} className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">
+              Send
+            </button>
           </div>
         </div>
       )}
