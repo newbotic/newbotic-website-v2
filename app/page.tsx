@@ -58,6 +58,7 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
+              {/* SERVICE 1 - Website Audit */}
               <div className="bg-white/5 rounded-xl p-6 border border-slate-700 relative">
                 <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs px-2 py-1 rounded-full">-50%</div>
                 <div className="text-4xl mb-4">🔍</div>
@@ -74,11 +75,16 @@ export default function Home() {
                   <span className="text-2xl font-bold text-blue-400">£75</span>
                   <span className="text-sm text-gray-400 line-through ml-2">£150</span>
                 </div>
-                <button className="w-full bg-blue-600/30 hover:bg-blue-600/50 border border-blue-500/50 py-2 rounded-lg transition">
+                <a 
+                  href="https://calendly.com/hello-newbotic/30min" 
+                  target="_blank" 
+                  className="block w-full bg-blue-600/30 hover:bg-blue-600/50 border border-blue-500/50 py-2 rounded-lg transition text-center"
+                >
                   Get Audit →
-                </button>
+                </a>
               </div>
 
+              {/* SERVICE 2 - Web Page Creation */}
               <div className="bg-white/5 rounded-xl p-6 border border-slate-700 relative">
                 <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs px-2 py-1 rounded-full">-50%</div>
                 <div className="text-4xl mb-4">🌐</div>
@@ -95,12 +101,17 @@ export default function Home() {
                   <span className="text-2xl font-bold text-purple-400">£175</span>
                   <span className="text-sm text-gray-400 line-through ml-2">£350</span>
                 </div>
-                <button className="w-full bg-purple-600/30 hover:bg-purple-600/50 border border-purple-500/50 py-2 rounded-lg transition">
+                <a 
+                  href="https://calendly.com/hello-newbotic/30min" 
+                  target="_blank" 
+                  className="block w-full bg-purple-600/30 hover:bg-purple-600/50 border border-purple-500/50 py-2 rounded-lg transition text-center"
+                >
                   Create Website →
-                </button>
+                </a>
               </div>
             </div>
 
+            {/* COMBO PACKAGE */}
             <div className="mt-10 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-white/20 text-center relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs px-3 py-1 rounded-full">BEST DEAL -50%</div>
               <h3 className="text-xl font-bold mb-2 mt-2">🎯 Combo Package: Audit + Website</h3>
@@ -110,9 +121,13 @@ export default function Home() {
                 <span className="text-sm text-gray-400 line-through ml-2">£500</span>
                 <span className="text-green-400 text-sm ml-2">Save £275!</span>
               </div>
-              <button className="bg-white text-slate-900 hover:bg-gray-200 px-6 py-2 rounded-lg font-semibold transition">
+              <a 
+                href="https://calendly.com/hello-newbotic/30min" 
+                target="_blank" 
+                className="inline-block bg-white text-slate-900 hover:bg-gray-200 px-6 py-2 rounded-lg font-semibold transition"
+              >
                 Book Combo Now →
-              </button>
+              </a>
             </div>
           </div>
         </section>
