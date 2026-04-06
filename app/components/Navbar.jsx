@@ -7,11 +7,14 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           <Logo />
           <div className="flex space-x-4 md:space-x-6">
-            <a href="#services" className="text-white hover:text-blue-200 transition text-sm md:text-base">Services</a>
-            <a href="#contact" className="text-white hover:text-blue-200 transition text-sm md:text-base">Contact</a>
-            <button className="bg-white text-blue-600 px-3 py-1 md:px-4 md:py-2 rounded-lg font-semibold hover:bg-gray-100 transition text-sm md:text-base">
+            <a href="#services" className="text-white hover:text-blue-200 transition text-sm md:text-base">Services</a>     
+            <a href="#contact" className="text-white hover:text-blue-200 transition text-sm md:text-base">Contact</a>       
+            <a 
+              href="#get-started" 
+              className="bg-white text-blue-600 px-3 py-1 md:px-4 md:py-2 rounded-lg font-semibold hover:bg-gray-100 transition text-sm md:text-base"
+            >
               Get Started
-            </button>
+            </a>
           </div>
         </div>
       </div>

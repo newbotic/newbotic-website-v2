@@ -2,15 +2,14 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import AIChatBot from './components/AIChatBot'
 
-
 export default function Home() {
   return (
     <>
       <Navbar />
       <main className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white pt-16 md:pt-20">
         
-        {/* HERO */}
-        <section className="container mx-auto px-4 py-12 md:py-16 text-center">
+        {/* HERO Section */}
+        <section id="hero" className="container mx-auto px-4 py-12 md:py-16 text-center">
           <div className="max-w-3xl mx-auto">
             
             <div className="flex justify-center mb-8">
@@ -40,8 +39,9 @@ export default function Home() {
               <p className="text-sm">⏰ Offer ends in: <span className="font-bold text-yellow-400">7 days</span></p>
             </div>
 
+            {/* CTA Buttons - Cal.com și WhatsApp */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="https://cal.com/username/15min" target="_blank" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
+              <a href="https://cal.com/newbotic/15min" target="_blank" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
                 📅 Book Free Call
               </a>
               <a href="https://wa.me/447891897558" target="_blank" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
@@ -51,8 +51,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* SERVICES */}
-        <section className="container mx-auto px-4 py-16">
+        {/* SERVICES Section */}
+        <section id="services" className="container mx-auto px-4 py-16">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">What I offer <span className="text-red-400 text-xl">(50% OFF)</span></h2>
             
@@ -117,40 +117,74 @@ export default function Home() {
           </div>
         </section>
 
-        {/* HOW IT WORKS */}
+        {/* HOW IT WORKS Section */}
         <section className="container mx-auto px-4 py-16 bg-white/5">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">How we work together</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div><div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">1</div><h3 className="font-bold mb-2">15min Call</h3><p className="text-sm text-gray-400">Tell me what you need</p></div>
-              <div><div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">2</div><h3 className="font-bold mb-2">50% Deposit</h3><p className="text-sm text-gray-400">I start work after confirmation</p></div>
-              <div><div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div><h3 className="font-bold mb-2">Delivery in 7 days</h3><p className="text-sm text-gray-400">You get everything + support</p></div>
+              <div>
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">1</div>
+                <h3 className="font-bold mb-2">15min Call</h3>
+                <p className="text-sm text-gray-400">Tell me what you need</p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">2</div>
+                <h3 className="font-bold mb-2">50% Deposit</h3>
+                <p className="text-sm text-gray-400">I start work after confirmation</p>
+              </div>
+              <div>
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
+                <h3 className="font-bold mb-2">Delivery in 7 days</h3>
+                <p className="text-sm text-gray-400">You get everything + support</p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* CONTACT */}
-        <section className="container mx-auto px-4 py-16">
+        {/* CONTACT Section */}
+        <section id="contact" className="container mx-auto px-4 py-16">
           <div className="max-w-md mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4">Start today</h2>
             <p className="text-gray-300 mb-6">Call, WhatsApp, follow or fill out the form</p>
             
             <div className="space-y-3 mb-6">
-              <a href="tel:+4407891897558" className="flex items-center justify-center gap-2 bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition">📞 +44 0789 189 7558</a>
-              <a href="https://wa.me/447891897558" target="_blank" className="flex items-center justify-center gap-2 bg-green-600/20 hover:bg-green-600/30 p-3 rounded-lg transition border border-green-500/30">💬 WhatsApp</a>
-              <a href="https://instagram.com/newbotic" target="_blank" className="flex items-center justify-center gap-2 bg-pink-600/20 hover:bg-pink-600/30 p-3 rounded-lg transition border border-pink-500/30">📷 Instagram @newbotic</a>
-              <a href="mailto:hello@newbotic.co.uk" className="flex items-center justify-center gap-2 bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition">✉️ hello@newbotic.co.uk</a>
+              <a href="tel:+4407891897558" className="flex items-center justify-center gap-2 bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition">
+                📞 +44 0789 189 7558
+              </a>
+              <a href="https://wa.me/447891897558" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-green-600/20 hover:bg-green-600/30 p-3 rounded-lg transition border border-green-500/30">
+                💬 WhatsApp
+              </a>
+              <a href="https://instagram.com/newbotic" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-pink-600/20 hover:bg-pink-600/30 p-3 rounded-lg transition border border-pink-500/30">
+                📷 Instagram @newbotic
+              </a>
+              <a href="mailto:hello@newbotic.co.uk" className="flex items-center justify-center gap-2 bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition">
+                ✉️ hello@newbotic.co.uk
+              </a>
             </div>
 
             <form action="https://formspree.io/f/mlgoapje" method="POST" className="space-y-3">
               <input type="text" name="name" placeholder="Your name" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
               <input type="email" name="email" placeholder="Your email" required className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
               <textarea name="message" placeholder="Which service are you interested in? (Audit / Website / Combo)" rows={3} className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500"></textarea>
-              <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold transition">Send → I'll reply within 24h</button>
+              <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold transition">
+                Send → I'll reply within 24h
+              </button>
             </form>
+          </div>
+        </section>
 
-            <div className="mt-4 text-sm text-gray-500">
-              <a href="https://instagram.com/newbotic" target="_blank" className="hover:text-pink-400 transition">🔗 instagram.com/newbotic</a>
+        {/* GET STARTED Section */}
+        <section id="get-started" className="container mx-auto px-4 py-16">
+          <div className="max-w-2xl mx-auto text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8">
+            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-6">Get 50% OFF on your first service - Limited time offer!</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="https://cal.com/newbotic/15min" target="_blank" className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold">
+                📅 Book Free Call
+              </a>
+              <a href="https://wa.me/447891897558" target="_blank" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-bold">
+                💬 WhatsApp
+              </a>
             </div>
           </div>
         </section>
@@ -158,9 +192,6 @@ export default function Home() {
       </main>
       <Footer />
       <AIChatBot />
-
-
-
     </>
   )
 }
