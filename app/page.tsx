@@ -20,15 +20,15 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Clear message - no AI vague */}
+            {/* Clear message */}
             <h1 className="text-3xl md:text-5xl font-bold mb-6">
-              Google Business + Facebook + Website Audit
+              Website Audit + Web Page Creation
               <br />
-              <span className="text-blue-400 text-2xl md:text-4xl">Everything for £250</span>
+              <span className="text-blue-400 text-2xl md:text-4xl">Starting from £250</span>
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 mb-8">
-              Complete package for your online presence
+              Professional websites and detailed audits for local businesses
               <br />
               <span className="text-blue-300">Ready in 7 days.</span>
             </p>
@@ -39,93 +39,98 @@ export default function Home() {
                 📞 Book Free Call
               </button>
             </div>
-
-            {/* 3 simple benefits - no fake stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="bg-white/5 p-4 rounded-lg">
-                <div className="text-2xl mb-2">✅</div>
-                <h3 className="font-bold">Google Business</h3>
-                <p className="text-sm text-gray-400">Appear on maps and local search</p>
-              </div>
-              <div className="bg-white/5 p-4 rounded-lg">
-                <div className="text-2xl mb-2">✅</div>
-                <h3 className="font-bold">Facebook Setup</h3>
-                <p className="text-sm text-gray-400">Page + CTA button + Instagram connection</p>
-              </div>
-              <div className="bg-white/5 p-4 rounded-lg">
-                <div className="text-2xl mb-2">✅</div>
-                <h3 className="font-bold">Website Audit</h3>
-                <p className="text-sm text-gray-400">Speed + Security + Google Analytics</p>
-              </div>
-            </div>
           </div>
         </section>
 
-        {/* THE PACKAGE - What client gets exactly */}
-        <section className="container mx-auto px-4 py-16 bg-white/5">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-8">What exactly do you get?</h2>
+        {/* TWO SERVICES SECTION */}
+        <section className="container mx-auto px-4 py-16">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">What I offer</h2>
             
-            <div className="bg-slate-800/50 rounded-xl p-6 md:p-8 border border-slate-700">
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <div>
-                    <strong>Complete Google Business Profile</strong>
-                    <p className="text-gray-400 text-sm">Verification, optimization, photos, categories, hours, description</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              
+              {/* SERVICE 1 - Website Audit */}
+              <div className="bg-white/5 rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
+                <div className="text-4xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold mb-3">Website Audit</h3>
+                <p className="text-gray-300 mb-4">Complete analysis of your current website</p>
+                
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> Speed performance test
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> Security check
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> SEO analysis
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> Mobile responsiveness
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> Detailed PDF report
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <div>
-                    <strong>Facebook Business Page</strong>
-                    <p className="text-gray-400 text-sm">Page setup, CTA button, Instagram connection</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <div>
-                    <strong>Complete Website Audit</strong>
-                    <p className="text-gray-400 text-sm">Speed test, security, basic SEO, Google Analytics</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <div>
-                    <strong>PDF Report with Recommendations</strong>
-                    <p className="text-gray-400 text-sm">What works well and what needs improvement</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-green-400 text-xl">✓</span>
-                  <div>
-                    <strong>30 Days Support After Delivery</strong>
-                    <p className="text-gray-400 text-sm">Questions and small adjustments included</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Price visible */}
-              <div className="mt-8 pt-6 border-t border-slate-700 text-center">
-                <div className="text-3xl font-bold text-blue-400">£250</div>
-                <div className="text-gray-400 text-sm mb-4">one-time setup • ready in 7 days</div>
-                <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold w-full md:w-auto">
-                  I want this package → Book now
+                
+                <div className="text-2xl font-bold text-blue-400 mb-4">£150</div>
+                <button className="w-full bg-blue-600/30 hover:bg-blue-600/50 border border-blue-500/50 py-2 rounded-lg transition">
+                  Get Audit →
                 </button>
               </div>
+
+              {/* SERVICE 2 - Web Page Creation */}
+              <div className="bg-white/5 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300">
+                <div className="text-4xl mb-4">🌐</div>
+                <h3 className="text-2xl font-bold mb-3">Web Page Creation</h3>
+                <p className="text-gray-300 mb-4">Professional website for your business</p>
+                
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> Custom design
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> Mobile friendly
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> SEO optimized
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> Contact form
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400">
+                    <span className="text-green-400">✓</span> Google Analytics setup
+                  </div>
+                </div>
+                
+                <div className="text-2xl font-bold text-purple-400 mb-4">From £350</div>
+                <button className="w-full bg-purple-600/30 hover:bg-purple-600/50 border border-purple-500/50 py-2 rounded-lg transition">
+                  Create Website →
+                </button>
+              </div>
+            </div>
+
+            {/* COMBO PACKAGE */}
+            <div className="mt-10 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-white/20 text-center">
+              <h3 className="text-xl font-bold mb-2">🎯 Combo Package: Audit + Website</h3>
+              <p className="text-gray-300 mb-3">Get both services at a discounted price</p>
+              <div className="text-3xl font-bold text-white mb-3">£450 <span className="text-sm text-gray-400 line-through ml-2">£500</span></div>
+              <button className="bg-white text-slate-900 hover:bg-gray-200 px-6 py-2 rounded-lg font-semibold transition">
+                Save £50 → Book Combo
+              </button>
             </div>
           </div>
         </section>
 
         {/* HOW IT WORKS - Simple process */}
-        <section className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-4 py-16 bg-white/5">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">How we work together</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">1</div>
                 <h3 className="font-bold mb-2">15min Call</h3>
-                <p className="text-sm text-gray-400">Tell me what you need, I explain how I can help</p>
+                <p className="text-sm text-gray-400">Tell me what you need</p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">2</div>
@@ -135,14 +140,14 @@ export default function Home() {
               <div>
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
                 <h3 className="font-bold mb-2">Delivery in 7 days</h3>
-                <p className="text-sm text-gray-400">You get everything + 30 days support</p>
+                <p className="text-sm text-gray-400">You get everything + support</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CONTACT - with WhatsApp & Instagram */}
-        <section className="container mx-auto px-4 py-16 bg-white/5">
+        <section className="container mx-auto px-4 py-16">
           <div className="max-w-md mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4">Start today</h2>
             <p className="text-gray-300 mb-6">Call, WhatsApp, follow or fill out the form</p>
@@ -166,7 +171,7 @@ export default function Home() {
             <form action="https://formspree.io/f/mlgoapje" method="POST" className="space-y-3">
               <input type="text" name="name" placeholder="Your name" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
               <input type="email" name="email" placeholder="Your email" required className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
-              <textarea name="message" placeholder="Tell me briefly about your business..." rows={3} className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500"></textarea>
+              <textarea name="message" placeholder="Which service are you interested in? (Audit / Website / Combo)" rows={3} className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500"></textarea>
               <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold transition">
                 Send → I'll reply within 24h
               </button>
