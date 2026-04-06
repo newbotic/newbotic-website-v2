@@ -19,7 +19,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* FACT #1 - Clear message, no AI vague */}
+            {/* Clear message - no AI vague */}
             <h1 className="text-3xl md:text-5xl font-bold mb-6">
               Google Business + Facebook + Website Audit
               <br />
@@ -32,7 +32,7 @@ export default function Home() {
               <span className="text-blue-300">Ready in 7 days.</span>
             </p>
 
-            {/* FACT #8 - One big button */}
+            {/* One big button */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <button className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
                 📞 Book Free Call
@@ -104,7 +104,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* FACT #9 - Price visible */}
+              {/* Price visible */}
               <div className="mt-8 pt-6 border-t border-slate-700 text-center">
                 <div className="text-3xl font-bold text-blue-400">£250</div>
                 <div className="text-gray-400 text-sm mb-4">one-time setup • ready in 7 days</div>
@@ -147,15 +147,12 @@ export default function Home() {
             <p className="text-gray-300 mb-6">Call, WhatsApp, follow or fill out the form</p>
             
             <div className="space-y-3 mb-6">
-              {/* FACT #2 - Phone number visible */}
               <a href="tel:+4407891897558" className="flex items-center justify-center gap-2 bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition">
                 📞 +44 0789 189 7558
               </a>
-              {/* FACT #3 - WhatsApp link */}
               <a href="https://wa.me/447891897558" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-green-600/20 hover:bg-green-600/30 p-3 rounded-lg transition border border-green-500/30">
                 💬 WhatsApp
               </a>
-              {/* FACT #4 - Instagram link */}
               <a href="https://instagram.com/newbotic" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-pink-600/20 hover:bg-pink-600/30 p-3 rounded-lg transition border border-pink-500/30">
                 📷 Instagram @newbotic
               </a>
@@ -164,8 +161,8 @@ export default function Home() {
               </a>
             </div>
 
-            {/* FACT #5 - Connected form (Formspree) */}
-            <form action="https://formspree.io/f/xkgwbqbj" method="POST" className="space-y-3">
+            {/* UPDATED FORM - with correct mlgoapje ID */}
+            <form action="https://formspree.io/f/mlgoapje" method="POST" className="space-y-3">
               <input type="text" name="name" placeholder="Your name" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
               <input type="email" name="email" placeholder="Your email" required className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
               <textarea name="message" placeholder="Tell me briefly about your business..." rows="3" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500"></textarea>
