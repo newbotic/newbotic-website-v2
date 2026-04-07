@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import AIChatBot from './components/AIChatBot'
+import SimpleConfigurator from './components/SimpleConfigurator'
 
 export default function Home() {
   return (
@@ -51,7 +52,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="container mx-auto px-4 py-16">
+        <section className="container mx-auto px-4 py-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-white mb-2">Build Your Custom Package</h2>
+            <p className="text-gray-400">Select your services and get instant price</p>
+          </div>
+          <SimpleConfigurator />
+        </section>
+
+        <section id="contact" className="container mx-auto px-4 py-16 bg-white/5">
           <div className="max-w-md mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4">Start today</h2>
             <div className="space-y-3 mb-6">
