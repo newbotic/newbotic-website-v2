@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import AIChatBot from './components/AIChatBot'
+import PriceCalculator from './components/PriceCalculator'
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
               <p className="text-sm">⏰ Offer ends in: <span className="font-bold text-yellow-400">7 days</span></p>
             </div>
 
-            {/* CTA Buttons - Calendly și WhatsApp */}
+            {/* CTA Buttons - Calendly and WhatsApp */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
                 📅 Book Free Call
@@ -156,8 +157,13 @@ export default function Home() {
           </div>
         </section>
 
+        {/* PRICE CALCULATOR SECTION - Allows client to select service and see price dynamically */}
+        <section className="container mx-auto px-4 py-16">
+          <PriceCalculator />
+        </section>
+
         {/* CONTACT Section */}
-        <section id="contact" className="container mx-auto px-4 py-16">
+        <section id="contact" className="container mx-auto px-4 py-16 bg-white/5">
           <div className="max-w-md mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4">Start today</h2>
             <p className="text-gray-300 mb-6">Call, WhatsApp, follow or fill out the form</p>
