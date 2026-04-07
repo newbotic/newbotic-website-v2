@@ -39,7 +39,6 @@ export default function Home() {
               <p className="text-sm">⏰ Offer ends in: <span className="font-bold text-yellow-400">7 days</span></p>
             </div>
 
-            {/* CTA Buttons - Calendly și WhatsApp */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
                 📅 Book Free Call
@@ -58,7 +57,6 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
-              {/* SERVICE 1 - Website Audit */}
               <div className="bg-white/5 rounded-xl p-6 border border-slate-700 relative">
                 <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs px-2 py-1 rounded-full">-50%</div>
                 <div className="text-4xl mb-4">🔍</div>
@@ -75,16 +73,11 @@ export default function Home() {
                   <span className="text-2xl font-bold text-blue-400">£75</span>
                   <span className="text-sm text-gray-400 line-through ml-2">£150</span>
                 </div>
-                <a 
-                  href="https://calendly.com/hello-newbotic/30min" 
-                  target="_blank" 
-                  className="block w-full bg-blue-600/30 hover:bg-blue-600/50 border border-blue-500/50 py-2 rounded-lg transition text-center"
-                >
+                <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="block w-full bg-blue-600/30 hover:bg-blue-600/50 border border-blue-500/50 py-2 rounded-lg transition text-center">
                   Get Audit →
                 </a>
               </div>
 
-              {/* SERVICE 2 - Web Page Creation */}
               <div className="bg-white/5 rounded-xl p-6 border border-slate-700 relative">
                 <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs px-2 py-1 rounded-full">-50%</div>
                 <div className="text-4xl mb-4">🌐</div>
@@ -101,17 +94,12 @@ export default function Home() {
                   <span className="text-2xl font-bold text-purple-400">£175</span>
                   <span className="text-sm text-gray-400 line-through ml-2">£350</span>
                 </div>
-                <a 
-                  href="https://calendly.com/hello-newbotic/30min" 
-                  target="_blank" 
-                  className="block w-full bg-purple-600/30 hover:bg-purple-600/50 border border-purple-500/50 py-2 rounded-lg transition text-center"
-                >
+                <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="block w-full bg-purple-600/30 hover:bg-purple-600/50 border border-purple-500/50 py-2 rounded-lg transition text-center">
                   Create Website →
                 </a>
               </div>
             </div>
 
-            {/* COMBO PACKAGE */}
             <div className="mt-10 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-white/20 text-center relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs px-3 py-1 rounded-full">BEST DEAL -50%</div>
               <h3 className="text-xl font-bold mb-2 mt-2">🎯 Combo Package: Audit + Website</h3>
@@ -121,11 +109,7 @@ export default function Home() {
                 <span className="text-sm text-gray-400 line-through ml-2">£500</span>
                 <span className="text-green-400 text-sm ml-2">Save £275!</span>
               </div>
-              <a 
-                href="https://calendly.com/hello-newbotic/30min" 
-                target="_blank" 
-                className="inline-block bg-white text-slate-900 hover:bg-gray-200 px-6 py-2 rounded-lg font-semibold transition"
-              >
+              <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="inline-block bg-white text-slate-900 hover:bg-gray-200 px-6 py-2 rounded-lg font-semibold transition">
                 Book Combo Now →
               </a>
             </div>
@@ -156,7 +140,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CONTACT Section */}
+        {/* CONTACT Section with Popup */}
         <section id="contact" className="container mx-auto px-4 py-16">
           <div className="max-w-md mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4">Start today</h2>
@@ -177,16 +161,30 @@ export default function Home() {
               </a>
             </div>
 
-            <form action="https://formspree.io/f/mlgoapje" method="POST" className="space-y-3">
-              <input type="text" name="name" placeholder="Your name" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
-              <input type="email" name="email" placeholder="Your email" required className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
-              <textarea name="message" placeholder="Which service are you interested in? (Audit / Website / Combo)" rows={3} className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500"></textarea>
-              <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold transition">
+            <form id="contactForm" className="space-y-3">
+              <input type="text" name="name" id="name" placeholder="Your name" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
+              <input type="email" name="email" id="email" placeholder="Your email" required className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
+              <textarea name="message" id="message" placeholder="Which service are you interested in? (Audit / Website / Combo)" rows={3} className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500"></textarea>
+              <button type="submit" id="submitBtn" className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold transition">
                 Send → I'll reply within 24h
               </button>
             </form>
           </div>
         </section>
+
+        {/* Popup Modal */}
+        <div id="popupMessage" className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm z-50 hidden">
+          <div className="bg-slate-800 rounded-xl p-8 max-w-md mx-4 shadow-2xl border border-slate-600">
+            <div className="text-center">
+              <div className="text-5xl mb-4">✅</div>
+              <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+              <p className="text-gray-300 mb-6">Thank you for reaching out. I will reply within 24 hours.</p>
+              <button id="closePopup" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-semibold transition">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
 
         {/* GET STARTED Section */}
         <section id="get-started" className="container mx-auto px-4 py-16">
@@ -207,6 +205,62 @@ export default function Home() {
       </main>
       <Footer />
       <AIChatBot />
+
+      {/* Script for AJAX form submission */}
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          const form = document.getElementById('contactForm');
+          const popup = document.getElementById('popupMessage');
+          const closeBtn = document.getElementById('closePopup');
+          const submitBtn = document.getElementById('submitBtn');
+
+          if (form) {
+            form.addEventListener('submit', async function(e) {
+              e.preventDefault();
+              
+              const originalText = submitBtn.innerHTML;
+              submitBtn.innerHTML = 'Sending...';
+              submitBtn.disabled = true;
+              
+              const formData = new FormData(this);
+              
+              try {
+                const response = await fetch('https://formspree.io/f/mlgoapje', {
+                  method: 'POST',
+                  body: formData,
+                  headers: {
+                    'Accept': 'application/json'
+                  }
+                });
+                
+                if (response.ok) {
+                  popup.classList.remove('hidden');
+                  this.reset();
+                } else {
+                  alert('Something went wrong. Please try again or email us directly.');
+                }
+              } catch (error) {
+                alert('Network error. Please check your connection and try again.');
+              } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+              }
+            });
+          }
+
+          if (closeBtn) {
+            closeBtn.addEventListener('click', function() {
+              popup.classList.add('hidden');
+            });
+          }
+
+          popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+              popup.classList.add('hidden');
+            }
+          });
+        `
+      }} />
     </>
   )
 }
