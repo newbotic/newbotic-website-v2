@@ -27,3 +27,27 @@
     border-color: rgba(59, 130, 246, 0.5);
   }
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .grid {
+    gap: 1rem !important;
+  }
+  
+  .rounded-xl {
+    padding: 1rem !important;
+  }
+}
