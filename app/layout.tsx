@@ -7,7 +7,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Newbotic - Website Audit & Web Creation | 50% OFF",
   description: "Professional website audit and web page creation for local businesses. Get 50% OFF limited offer.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({
@@ -18,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }
