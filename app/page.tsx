@@ -13,7 +13,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             
             <div className="flex justify-center mb-8">
-              <div className="bg-white/10 backdrop-blur-lg px-6 py-3 rounded-xl">
+              <div className="bg-white/10 backdrop-blur-lg px-6 py-3 rounded-xl hover:bg-white/20 transition-all duration-300">
                 <span className="text-2xl font-bold">NEWBOTIC</span>
                 <span className="text-blue-400 text-sm ml-2">digital</span>
               </div>
@@ -40,10 +40,10 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
+              <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl min-w-[220px]">
                 📅 Book Free Call
               </a>
-              <a href="https://wa.me/447891897558" target="_blank" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-bold text-lg transition-all min-w-[220px]">
+              <a href="https://wa.me/447891897558" target="_blank" className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl min-w-[220px]">
                 💬 WhatsApp
               </a>
             </div>
@@ -57,7 +57,7 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               
-              <div className="bg-white/5 rounded-xl p-6 border border-slate-700 relative">
+              <div className="bg-white/5 rounded-xl p-6 border border-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/50 relative">
                 <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs px-2 py-1 rounded-full">-50%</div>
                 <div className="text-4xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold mb-3">Website Audit</h3>
@@ -73,12 +73,16 @@ export default function Home() {
                   <span className="text-2xl font-bold text-blue-400">£75</span>
                   <span className="text-sm text-gray-400 line-through ml-2">£150</span>
                 </div>
-                <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="block w-full bg-blue-600/30 hover:bg-blue-600/50 border border-blue-500/50 py-2 rounded-lg transition text-center">
+                <a 
+                  href="https://calendly.com/hello-newbotic/30min" 
+                  target="_blank" 
+                  className="block w-full bg-blue-600/30 hover:bg-blue-600/50 border border-blue-500/50 py-2 rounded-lg transition-all duration-300 text-center hover:scale-[1.02]"
+                >
                   Get Audit →
                 </a>
               </div>
 
-              <div className="bg-white/5 rounded-xl p-6 border border-slate-700 relative">
+              <div className="bg-white/5 rounded-xl p-6 border border-slate-700 transition-all duration-300 hover:-translate-y-1 hover:border-purple-500/50 relative">
                 <div className="absolute -top-3 -right-3 bg-red-600 text-white text-xs px-2 py-1 rounded-full">-50%</div>
                 <div className="text-4xl mb-4">🌐</div>
                 <h3 className="text-2xl font-bold mb-3">Web Page Creation</h3>
@@ -94,13 +98,17 @@ export default function Home() {
                   <span className="text-2xl font-bold text-purple-400">£175</span>
                   <span className="text-sm text-gray-400 line-through ml-2">£350</span>
                 </div>
-                <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="block w-full bg-purple-600/30 hover:bg-purple-600/50 border border-purple-500/50 py-2 rounded-lg transition text-center">
+                <a 
+                  href="https://calendly.com/hello-newbotic/30min" 
+                  target="_blank" 
+                  className="block w-full bg-purple-600/30 hover:bg-purple-600/50 border border-purple-500/50 py-2 rounded-lg transition-all duration-300 text-center hover:scale-[1.02]"
+                >
                   Create Website →
                 </a>
               </div>
             </div>
 
-            <div className="mt-10 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-white/20 text-center relative">
+            <div className="mt-10 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-white/20 text-center transition-all duration-300 hover:-translate-y-1 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs px-3 py-1 rounded-full">BEST DEAL -50%</div>
               <h3 className="text-xl font-bold mb-2 mt-2">🎯 Combo Package: Audit + Website</h3>
               <p className="text-gray-300 mb-3">Get both services at a discounted price</p>
@@ -109,7 +117,11 @@ export default function Home() {
                 <span className="text-sm text-gray-400 line-through ml-2">£500</span>
                 <span className="text-green-400 text-sm ml-2">Save £275!</span>
               </div>
-              <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="inline-block bg-white text-slate-900 hover:bg-gray-200 px-6 py-2 rounded-lg font-semibold transition">
+              <a 
+                href="https://calendly.com/hello-newbotic/30min" 
+                target="_blank" 
+                className="inline-block bg-white text-slate-900 hover:bg-gray-200 px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:scale-[1.02]"
+              >
                 Book Combo Now →
               </a>
             </div>
@@ -121,18 +133,18 @@ export default function Home() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">How we work together</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div>
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">1</div>
+              <div className="transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3 transition-all duration-300 hover:scale-110 hover:bg-blue-500">1</div>
                 <h3 className="font-bold mb-2">15min Call</h3>
                 <p className="text-sm text-gray-400">Tell me what you need</p>
               </div>
-              <div>
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">2</div>
+              <div className="transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3 transition-all duration-300 hover:scale-110 hover:bg-blue-500">2</div>
                 <h3 className="font-bold mb-2">50% Deposit</h3>
                 <p className="text-sm text-gray-400">I start work after confirmation</p>
               </div>
-              <div>
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3">3</div>
+              <div className="transition-all duration-300 hover:-translate-y-1">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-3 transition-all duration-300 hover:scale-110 hover:bg-blue-500">3</div>
                 <h3 className="font-bold mb-2">Delivery in 7 days</h3>
                 <p className="text-sm text-gray-400">You get everything + support</p>
               </div>
@@ -147,25 +159,25 @@ export default function Home() {
             <p className="text-gray-300 mb-6">Call, WhatsApp, follow or fill out the form</p>
             
             <div className="space-y-3 mb-6">
-              <a href="tel:+4407891897558" className="flex items-center justify-center gap-2 bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition">
+              <a href="tel:+4407891897558" className="flex items-center justify-center gap-2 bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition-all duration-300 hover:-translate-y-0.5">
                 📞 +44 0789 189 7558
               </a>
-              <a href="https://wa.me/447891897558" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-green-600/20 hover:bg-green-600/30 p-3 rounded-lg transition border border-green-500/30">
+              <a href="https://wa.me/447891897558" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-green-600/20 hover:bg-green-600/30 p-3 rounded-lg transition-all duration-300 border border-green-500/30 hover:-translate-y-0.5">
                 💬 WhatsApp
               </a>
-              <a href="https://instagram.com/newbotic" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-pink-600/20 hover:bg-pink-600/30 p-3 rounded-lg transition border border-pink-500/30">
+              <a href="https://instagram.com/newbotic" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 bg-pink-600/20 hover:bg-pink-600/30 p-3 rounded-lg transition-all duration-300 border border-pink-500/30 hover:-translate-y-0.5">
                 📷 Instagram @newbotic
               </a>
-              <a href="mailto:hello@newbotic.co.uk" className="flex items-center justify-center gap-2 bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition">
+              <a href="mailto:hello@newbotic.co.uk" className="flex items-center justify-center gap-2 bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition-all duration-300 hover:-translate-y-0.5">
                 ✉️ hello@newbotic.co.uk
               </a>
             </div>
 
             <form id="contactForm" className="space-y-3">
-              <input type="text" name="name" id="name" placeholder="Your name" className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
-              <input type="email" name="email" id="email" placeholder="Your email" required className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500" />
-              <textarea name="message" id="message" placeholder="Which service are you interested in? (Audit / Website / Combo)" rows={3} className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500"></textarea>
-              <button type="submit" id="submitBtn" className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold transition">
+              <input type="text" name="name" id="name" placeholder="Your name" required className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-all duration-300" />
+              <input type="email" name="email" id="email" placeholder="Your email" required className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-all duration-300" />
+              <textarea name="message" id="message" placeholder="Which service are you interested in? (Audit / Website / Combo)" rows={3} required className="w-full p-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition-all duration-300"></textarea>
+              <button type="submit" id="submitBtn" className="w-full bg-blue-600 hover:bg-blue-700 p-3 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
                 Send → I'll reply within 24h
               </button>
             </form>
@@ -173,13 +185,13 @@ export default function Home() {
         </section>
 
         {/* Popup Modal */}
-        <div id="popupMessage" className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm z-50 hidden">
-          <div className="bg-slate-800 rounded-xl p-8 max-w-md mx-4 shadow-2xl border border-slate-600">
+        <div id="popupMessage" className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm z-50 hidden transition-all duration-300">
+          <div className="bg-slate-800 rounded-xl p-8 max-w-md mx-4 shadow-2xl border border-slate-600 transform transition-all duration-300 scale-100">
             <div className="text-center">
               <div className="text-5xl mb-4">✅</div>
               <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
               <p className="text-gray-300 mb-6">Thank you for reaching out. I will reply within 24 hours.</p>
-              <button id="closePopup" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-semibold transition">
+              <button id="closePopup" className="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-0.5">
                 Close
               </button>
             </div>
@@ -188,14 +200,14 @@ export default function Home() {
 
         {/* GET STARTED Section */}
         <section id="get-started" className="container mx-auto px-4 py-16">
-          <div className="max-w-2xl mx-auto text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8">
+          <div className="max-w-2xl mx-auto text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-gray-300 mb-6">Get 50% OFF on your first service - Limited time offer!</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold">
+              <a href="https://calendly.com/hello-newbotic/30min" target="_blank" className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 📅 Book Free Call
               </a>
-              <a href="https://wa.me/447891897558" target="_blank" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-bold">
+              <a href="https://wa.me/447891897558" target="_blank" className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-bold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                 💬 WhatsApp
               </a>
             </div>
@@ -214,9 +226,38 @@ export default function Home() {
           const closeBtn = document.getElementById('closePopup');
           const submitBtn = document.getElementById('submitBtn');
 
+          function validateEmail(email) {
+            const re = /^[^\\s@]+@([^\\s@]+\\.)+[^\\s@]+$/;
+            return re.test(email);
+          }
+
           if (form) {
             form.addEventListener('submit', async function(e) {
               e.preventDefault();
+              
+              const name = document.getElementById('name').value.trim();
+              const email = document.getElementById('email').value.trim();
+              const message = document.getElementById('message').value.trim();
+              
+              if (!name) {
+                alert('Please enter your name.');
+                return;
+              }
+              
+              if (!email) {
+                alert('Please enter your email address.');
+                return;
+              }
+              
+              if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+              }
+              
+              if (!message) {
+                alert('Please enter your message.');
+                return;
+              }
               
               const originalText = submitBtn.innerHTML;
               submitBtn.innerHTML = 'Sending...';
@@ -254,11 +295,13 @@ export default function Home() {
             });
           }
 
-          popup.addEventListener('click', function(e) {
-            if (e.target === popup) {
-              popup.classList.add('hidden');
-            }
-          });
+          if (popup) {
+            popup.addEventListener('click', function(e) {
+              if (e.target === popup) {
+                popup.classList.add('hidden');
+              }
+            });
+          }
         `
       }} />
     </>
